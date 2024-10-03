@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <h1>Simple Timer</h1>
+    <button id="start_timer">Start Timer</button>
+    <button id="stop_timer">Stop Timer</button>
+    
+    <p id="timer">Time Elapsed: 0 seconds</p>
+    <script>
+        let seconds=0;
+        let timerId;
+        const timerDisplay=document.getElementById('timer');
+        const startButton=document.getElementById('start_timer');
+        const stopButton=document.getElementById('stop_timer'); 
+        startButton.addEventListener('click',()=>{
+            if(!timerId){
+                timerId=setInterval(()=>{
+                    seconds++;
+                    timerDisplay.textContent=`Time Elapsed: ${seconds} seconds`;
+                },1000);
+                console.log(timerId)}});
+        stopButton.addEventListener('click',()=>{
+            clearInterval(timerId);
+            timerId = null;
+        });
+    </script>
+</body>
+</html>

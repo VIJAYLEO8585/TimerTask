@@ -8,16 +8,16 @@
 </head>
 <body>
     <h1>Simple Timer</h1>
-    <button id="start_timer">Start Timer</button>
-    <button id="stop_timer">Stop Timer</button>
+    <button id="start_timer_btn">Start Timer</button>
+    <button id="stop_timer_btn">Stop Timer</button>
     
     <p id="timer">Time Elapsed: 0 seconds</p>
     <script>
         let seconds=0;
         let timerId;
         const timerDisplay=document.getElementById('timer');
-        const startButton=document.getElementById('start_timer');
-        const stopButton=document.getElementById('stop_timer'); 
+        const startButton=document.getElementById('start_timer_btn');
+        const stopButton=document.getElementById('stop_timer_btn'); 
         startButton.addEventListener('click',()=>{
             if(!timerId){
                 timerId=setInterval(()=>{
